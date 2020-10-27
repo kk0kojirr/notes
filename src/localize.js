@@ -1,5 +1,5 @@
 import * as AmplifyModules from 'aws-amplify'
-let languageDict = {
+const languageDict = {
   ja:{
     'Sign in to your account': 'アカウントにサインイン',
     'Create a new account': '登録',
