@@ -48,7 +48,7 @@ export default {
       }
     },
     displayPrivateNotes: async function () {
-      let privateNotes = await API.graphql(graphqlOperation(
+      const privateNotes = await API.graphql(graphqlOperation(
         listPrivateNotes, {limit: this.limit}
       ))
       this.privateNotes = _.orderBy(privateNotes.data.listPrivateNotes.items, 'updatedAt', 'desc').slice(0, 100)
@@ -64,7 +64,7 @@ export default {
       })
     },
     singlePrivateNote: async function (selectedNote) {
-      let privateNote = await API.graphql(graphqlOperation(
+      const privateNote = await API.graphql(graphqlOperation(
         getPrivateNote, {id: selectedNote.id}
       ))
       this.privateNote = privateNote
